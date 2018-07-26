@@ -85,6 +85,20 @@ module.exports = function ( THREE ) {
 				// US-ASCII ordinal values for 's', 'o', 'l', 'i', 'd'
 				var solid = [ 115, 111, 108, 105, 100 ];
 
+				var matchDataViewAt = function ( query, reader, offset ) {
+
+					// Check if each byte in query matches the corresponding byte from the current offset
+		
+					for ( var i = 0, il = query.length; i < il; i++ ) {
+		
+						if ( query[ i ] !== reader.getUint8( offset + i, false ) ) return false;
+		
+					}
+		
+					return true;
+		
+				},
+
 				for ( var off = 0; off < 5; off++ ) {
 					// If "solid" text is matched to the current offset, declare it to be an ASCII STL.
 					if ( matchDataViewAt( solid, reader, off ) ) return false;
@@ -99,19 +113,7 @@ module.exports = function ( THREE ) {
 			return isBinary() ? this.parseBinary( binData ) : this.parseASCII( this.ensureString( data ) );
 		},
 
-		matchDataViewAt: function ( query, reader, offset ) {
-
-			// Check if each byte in query matches the corresponding byte from the current offset
-
-			for ( var i = 0, il = query.length; i < il; i++ ) {
-
-				if ( query[ i ] !== reader.getUint8( offset + i, false ) ) return false;
-
-			}
-
-			return true;
-
-		},
+		
 
 		parseBinary: function ( data ) {
 
