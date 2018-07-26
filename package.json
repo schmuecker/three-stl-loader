@@ -1,6 +1,6 @@
 {
   "name": "three-stl-loader",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "@aleeper's three.js stl-loader as a node module",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enspiral-cherubi/three-stl-loader.git"
+    "url": "git+https://github.com/schmuto/three-stl-loader.git"
   },
   "keywords": [
     "three",
@@ -16,10 +16,10 @@
     "stl",
     "loader"
   ],
-  "author": "data-doge <eugene@enspiral.com> (http://fuckafucka.com)",
+  "author": "Tobias Schmücker <schmuecker@intuity.de>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/enspiral-cherubi/three-stl-loader/issues"
+    "url": "https://github.com/schmuto/three-stl-loader/issues"
   },
-  "homepage": "https://github.com/enspiral-cherubi/three-stl-loader#readme"
+  "homepage": "https://github.com/schmuto/three-stl-loader#readme"
 }

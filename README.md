@@ -13,9 +13,10 @@
 ```js
 
 var THREE = require('three')
-var STLLoader = require('three-stl-loader')(THREE)
+var threeStlLoader = import 'three-stl-loader'
+const stlLoader = threeStlLoader(THREE);
 
-var loader = new STLLoader()
+var loader = new stlLoader()
 
 loader.load('./path/to/daaaamn.stl', function (geometry) {
   var material = new THREE.MeshNormalMaterial()
