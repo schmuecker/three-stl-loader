@@ -97,7 +97,7 @@ module.exports = function ( THREE ) {
 		
 					return true;
 		
-				},
+				};
 
 				for ( var off = 0; off < 5; off++ ) {
 					// If "solid" text is matched to the current offset, declare it to be an ASCII STL.
